@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos HTML</title>
+</head>
+
+<body>
+    <h1>Titulo h1</h1>
+    <h2>Titulo h2</h2>
+    <h3>Titulo h3</h3>
+    <h4>Titulo h4</h4>
+    <h5>Titulo h5</h5>
+    <h6>Titulo h6</h6>
+    <!-- Salto de linea -->
+    <br>
+    <!-- Linea horizontal -->
+    <hr>
+    <!-- p= Parrafo / b=negrita / i= italica / u= subrayado -->
+    <p>
+        <b>RANDOM</b> es una <i>palabra</i> del <u>inglés</u> que podemos traducir al español como aleatorio, fortuito o
+        casual. Random, en este sentido, es aquello que depende del azar; que no obedece a ningún método o criterio, y
+        cuyo resultado resulta siempre desconocido e inesperado.
+    </p>
+    <p><b><i><u>Esteban Andres</u></i></b></p>
+    <hr><br>
+    <!-- Imagenes -->
+    <!-- El alt es lo que aparece si la imagen de src no es encontrada -->
+    <img src="imagenquenoexiste.jpg" alt="imagen1">
+    <img src="assets/img/gatu.jpg" alt="imagen de gato" width="400" height="200">
+    <!-- Si se ingresa solamente uno (width o height) se mantendra la proporcion -->
+    <img src="assets/img/53j.png" alt="imagen2" width="100">
+    <hr><br>
+    <!-- Se llama ancor -->
+    <!-- Link o hipervinculo -->
+    <a href="https://github.com/esancal">Mi github</a>
+    <br>
+    <!-- Valor absoluto, redirige a otra pagina web (Fuera del dominio) -->
+    <!-- target="_blank" abre una nueva pestaña -->
+    <a href="https://www.lun.com" target="_blank">acceder a lun</a>
+    <br>
+    <!-- URI de valor relativo, redirige dentro de la misma web -->
+    <a href="pagina2.html">Pagina 2</a>
+    <br>
+    <!-- URI valor anclaje, movernos dentro de la misma pagina -->
+    <a href="#nombre">Ir a seccion dentro de la pagina</a>
+    <br>
+    <!-- Poner una imagen para acceder al enlace -->
+    <a href="https://www.generation.org/" target="_blank">
+        <img src="assets/img/you_employed.png" alt="imagen3" height="80">
+    </a>
+    <hr><br>
+    <!-- Orden List (ol) -->
+    <!-- Listas: Ordebadas y las No Ordenadas -->
+    <ol>
+        <li>grupo 1</li>
+        <li>grupo 2</li>
+        <li>grupo 3</li>
+        <li>grupo 4</li>
+        <li>grupo 5</li>
+        <li>grupo 6</li>
+        <li>grupo 7
+            <ol>
+                <li>grupo 7.1</li>
+                <li>grupo 7.2</li>
+            </ol>
+        </li>
+    </ol>
+    <!-- Lista no ordenada -->
+    <ul>
+        <li>grupo 1</li>
+        <li>grupo 2</li>
+        <li>grupo 3</li>
+        <li>grupo 4</li>
+        <li>grupo 5</li>
+        <li>grupo 6</li>
+        <li>grupo 7
+            <ul>
+                <li>grupo 7.1</li>
+                <li>grupo 7.2</li>
+                <li>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li>curso b</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <!--
+    <ul>
+        <c:forEach items="${lista}" var="item">
+            <li>${item}</li>
+        </c:forEach>
+    </ul>-->
+    <br>
+    <hr>
+    <!-- table siempre tiene thead y tbody -->
+    <!-- th es columna(en negrita para cabecera), tr es fila -->
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+    <!-- td es columna para valores -->
+        <tbody>
+            <tr>
+                <td>Esteban</td>
+                <td>Cas</td>
+                <td>Alf</td>
+                <td>22</th>
+            </tr>
+            <tr>
+                <td>Andres</td>
+                <td>Alf</td>
+                <td></td>
+                <td>33</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>
