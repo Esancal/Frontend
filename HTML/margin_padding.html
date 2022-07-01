@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin Padding</title>
+    <style>
+        #padre{
+            box-sizing: border-box;
+            width: 400px;
+            height: 400px;
+            background-color: blue;
+            border: 0px solid blue;
+            padding-left: 0px;
+        }
+        #hijo{
+            
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            margin: 0px;
+        }
+        #hijo2{
+            
+            width: 40px;
+            height: 40px;
+            background-color: grey;
+            margin: 0px;
+        }
+        /* Para mantener la proporcion de 400x400 (px) se tuvo que quitar al tamaño 
+        Mientras que box-sizing: border-box; lo realiza de forma automatica*/
+
+        /* El margin crea area alrededor del objeto (se puede usar con auto) (el efecto visual es que se aleja de lo externo)
+        El border crea una capa que no permite que los objetos interiores muevan al objeto exterior
+        El padding crea un area dentro del objeto (el efecto visual es que el interior se aleja de los bordes)
+        */
+    </style>
+</head>
+<body>
+    <div id="padre">
+        <div id="hijo"></div>
+        <div id="hijo2"></div>
+    </div>
+</body>
+</html>

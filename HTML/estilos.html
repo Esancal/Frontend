@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        /* 3 formas basicas de asignar un estilo */
+        /* Si un elemento posee mas de 1 estilo, el estilo mas cercano al elemento sera el mas importante */
+        /* 1ra forma: por elemento HTML, todas etiquetas se ven afectadas*/
+        div {
+            background-color: burlywood;
+            width: 50%;
+        }
+
+        p {
+            background-color: cornflowerblue;
+        }
+
+        /* Se puede añadir a todas las imagenes */
+        img {
+            width: 300px;
+        }
+
+        /* EM = 16px y REM unidades de medida*/
+
+
+        /* 2da forma: por clases (.), se ven afectados solo aquellas etiquetas que tengan la clase */
+        /* Cualquier etiqueta */
+        .mochi {
+            color: white;
+            
+        }
+
+        .generation1 {
+            color: blueviolet;
+            background-color: black;
+        }
+
+        /* 3ra forma: Por id (#), Estilo especifico para la etiqueta */
+        #importante {
+            color: cyan;
+        }
+
+        /* !important le da mas prioridad */
+        #pg1 {
+            color: red !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>Parrafo 1</p>
+        <p class="mochi">Parrafo 2</p>
+        <p class="mochi">Parrafo 3</p>
+        <p id="importante">Parrafo 4</p>
+        <img src="assets/img/53j.png" alt="front">
+    </div>
+    <!-- Le esta heredando el estilo -->
+    <div class="mochi">
+        <p>Parrafo 5</p>
+    </div>
+    <p id="pg1" class="generation1 mochi">Parrafo 6</p>
+</body>
+
+</html>

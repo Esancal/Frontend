@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Estoy en la pagina 2</h1>
     <a href="index.html">Pagina principal</a>
+    <br>
+    <!-- Radio Button -->
+    <!-- name deben ser iguales -->
+    <!-- Con el label for (ref) se le hace referencia al id -->
+    <h2>Seleccione una opcion</h2>
+    <label for="html">HTML</label> <input type="radio" name="opcion" id="html" value="html"><br>
+    <input type="radio" name="opcion" id="css" value="css"> CSS<br>
+    <input type="radio" name="opcion" id="js" value="js"> JavaScript<br>
+    <!-- opcion = css -->
+    <hr><br>
+
+    <!-- checkbox -->
+    <!-- url?opciones1=html&opciones2=css&opciones3=js -->
+    <h2>Seleccione las opciones que quiera</h2>
+    HTML <input type="checkbox" name="opciones1" id="opciones1" value="html"> <br>
+    <input type="checkbox" name="opciones2" id="opciones2" value="css"><label for="opciones2">CSS</label> <br>
+    <input type="checkbox" name="opciones3" id="opciones3" value="js">JavaScript <br>
+    <hr><br>
+    <!-- Select -->
+    <!-- value 0 para por defecto y que debe escoger algo -->
+    <!-- selected para que empiece ahi (no recomendado por si la persona no lo cambia) -->
+    <!-- con multiple se pueden seleccionar mas de una opcion con CTRL o Shift -->
+    <!-- multiple va en el select -->
+    <label for="lenguajes"><h2>Seleccione una opcion</h2></label>
+    <select id="lenguajes" name="lenguajes">
+        <option value="0" selected>Seleccione un lenguaje</option>
+        <option value="1">JAVA</option>
+        <option value="2">Python</option>
+        <option value="3">JavaScript</option>
+        <option value="4">C#</option>
+        <option value="5">Ruby</option>
+    </select>
+
+
+
 </body>
+
 </html>

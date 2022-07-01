@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos de estilo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            width: 200px;
+            /* ancho */
+            height: 50px;
+            /* alto */
+            /* font-family estilo de letra */
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            font-weight: bold;
+            /* o un numero */
+        }
+
+        div {
+            width: 400px;
+            height: 400px;
+            overflow: auto;
+            /* le agrega barra de desplazamiento al elemento */
+            background: rgba(255, 0, 0, 0.5) url("assets/img/html2.png") no-repeat center;
+            background-size: 50%;
+            /* Se reemplazan, por lo que lo ideal es poner primero el generico y luego el especifico */
+            border: 3px solid yellowgreen;
+            border-top-color: blueviolet;
+            /* Curvatura del borde */
+            border-radius: 10px;
+            text-align: center;
+        }
+        /* posicion: static, relative, fixed, absolute, sticky */
+        .estatico{
+                width: 500px;
+                height: 20px;
+                position: static; /* posicion original */
+            }
+        .relativo{
+            width: 500px;
+            height: 20px;
+            left: 50px; /* top, right, bottom, left */
+            position: relative;
+        }
+        .fijo{
+            width: 500px;
+            height: 20px;
+            right: 50px;
+            /*top: 0px;*/
+            position: fixed;
+        }
+
+        /* Hexadecimal base 16: 0123456789 ABCDEF 
+        #12 32 53 ROJO VERDE AZUL rgb
+        */
+        /* rgba(x,y,z,a) x-y-z (0-255), la a es la opacidad (0 hasta 1) */
+        a {
+            text-decoration: none;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Elementos de estilo</h1>
+        <a href="#">Link de prueba</a>
+        <p>Parrafo 1</p>
+    </div>
+    <div class="estatico">
+        <p>
+            este es un texto con posicionamiento static
+        </p>
+    </div>
+    <div class="relativo">
+        <p>
+            este es un texto con posicionamiento relativo
+        </p>
+    </div>
+    <div class="fijo">
+        <p>
+            este es un texto con posicionamiento fijo
+        </p>
+    </div>
+
+</body>
+
+</html>
