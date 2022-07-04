@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            // Elemento, clase, id -> asignar funcionalidades
+            // &('button').evento();
+            // get y set para capturar valores
+
+            // Intentar usar las comillas simples, ya que al concatenar html se produciria un error
+            // ya que html utiliza las comillas en su sintaxis
+
+
+            // Al clickear un parrafo se cambia de texto
+            $('p').click(function () {
+                console.log($(this).text());
+                $(this).text('Esto es un texto por uso del this');
+            });
+
+
+            // .hover es cuando pasa el mouse encima
+            $('#btn1').click(function () {
+                let parrafo1 = $('#p1').text();
+                alert("evento click: " + parrafo1);
+                // Set
+                $('#p1').text('Esto es un nuevo mensaje');
+            });
+
+            // Funciones de efecto
+
+            // hide() -> ocultar elementos
+            $('#btn2').click(function () {
+                $('#p2').hide();
+            });
+
+            // show() -> mostrar elementos
+            $('#btn3').hover(function () {
+                $('#p2').show();
+            });
+
+            // Toggle() -> ocultar o mostrar elementos
+            $('#btn4').click(function () {
+                $('#p2').toggle();
+            });
+            
+
+            // Tiempo en milisegundos
+            // slideUp() -> para subir el elemento (ocultar)
+            $('#btn5').click(function () {
+                $('#p3').slideUp(1000);
+            });
+
+            // slideDown() -> para bajar el elemento (mostrar)
+            $('#btn6').click(function () {
+                $('#p3').slideDown(500);
+            });
+
+            // slideToggle() -> subir y bajar el elemento
+            $('#btn7').click(function () {
+                $('#p3').slideToggle(100);
+            });
+
+
+            // fadeOut -> Desaparece
+            $('#btn8').click(function () {
+                $('#p4').fadeOut(500);
+            });
+
+            // fadeIn -> Aparece
+            $('#btn9').click(function () {
+                $('#p4').fadeIn(1000);
+            });
+
+            // fadeToggle() -> Ambas acciones
+            $('#btn10').click(function () {
+                $('#p4').fadeToggle(100);
+            });
+
+
+
+
+            //fin jquery    
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Getter y Setter</h1>
+    <button id="btn1" class="btn btn-primary"> get y set </button>
+    <p id="p1">Este es el parrafo 1</p>
+    <hr><br>
+    <!-- Efectos -->
+    <!-- Hide -->
+    <h1>Hide Show Toggle</h1>
+    <button id="btn2" class="btn btn-primary"> hide </button>
+    <button id="btn3" class="btn btn-primary"> show </button>
+    <button id="btn4" class="btn btn-secondary"> toggle </button>
+    <p id="p2">Este es el parrafo 2</p>
+    <hr><br>
+    <!-- slideUp slideDown slideToggle -->
+    <h1>SlideUp SlideDown slideToggle</h1>
+    <button id="btn5" class="btn btn-primary"> slideUp </button>
+    <button id="btn6" class="btn btn-primary"> slideDown </button>
+    <button id="btn7" class="btn btn-secondary"> slideToggle </button>
+    <p id="p3">Este es el parrafo 3</p>
+    <hr><br>
+    <!-- fadeIn fadeOut fadeToggle -->
+    <h1>FadeIn FadeOut FadeToggle</h1>
+    <button id="btn8" class="btn btn-primary"> fadeOut </button>
+    <button id="btn9" class="btn btn-primary"> fadeIn </button>
+    <button id="btn10" class="btn btn-secondary"> fadeToggle </button>
+    <p id="p4">Este es el parrafo 4</p>
+    <hr><br>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
