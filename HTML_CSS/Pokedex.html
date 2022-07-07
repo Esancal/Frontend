@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script>
+
+        function pokedex() {
+            for (let i = 1; i <= 151; i++) {
+                $('.container').append('<img class="pokemon" id="' + i + '" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + i + '.png" alt="">')
+            }
+
+        }
+        $(document).ready(function () {
+            pokedex();
+            $('.pokemon').click(function () {
+                let id = $(this).attr('id');
+                $.get('https://pokeapi.co/api/v2/pokemon/' + $(this).attr('id'), function (respuesta) {
+                    let imagen = respuesta.sprites.front_default;
+                    let nombre = respuesta.name;
+                    console.log(nombre)
+                }, 'json');
+            });
+
+
+        });
+        // $.get('https://pokeapi.co/api/v2/pokemon/' + i, function (respuesta) {
+            //     let imagen = respuesta.sprites.front_default;
+            //     let nombre = respuesta.name;
+            //     $('.container').append('<img class="pokemon" src="' + imagen + '" id="' + i + '" alt="' + nombre + '">');
+            // }, 'json');
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+
+    </div>
+
+</body>
+
+</html>

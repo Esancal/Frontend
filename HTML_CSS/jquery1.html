@@ -51,7 +51,7 @@
             $('#btn4').click(function () {
                 $('#p2').toggle();
             });
-            
+
 
             // Tiempo en milisegundos
             // slideUp() -> para subir el elemento (ocultar)
@@ -86,12 +86,80 @@
             });
 
 
+            // Manipuñacion de elementos HTML
+            // After
+
+            // .after(x) añade "x" despues del parrafo 5 (#p5)
+            $('#btn11').click(function () {
+                $('#p5').after('<h2>Titulo h2<h2>');
+                $('#p5').after('<img src="" alt="prueba">');
+
+            });
+
+            // .before(x) añade "x" antes del parrafo 5 (#p5)
+            $('#btn12').click(function () {
+                $('#p5').before('<h2>Titulo h2<h2>');
+            });
+
+            // append -> agrega despues de la etiqueta
+
+            $('#btn13').click(function () {
+                $('#p5').append('<span> esto es span en un append </span>');
+            });
+
+            // prepend -> agrega antes de la etiqueta
+            $('#btn14').click(function () {
+                $('#p5').prepend('<span> esto es span en un prepend </span>');
+            });
+
+            // attr -> agregar un atributo a un elemento html
+            $('#btn15').click(function () {
+                $('#p6').attr('style', 'font-size:10px');
+                $('#p6').attr('style', 'color:red; font-size:30px');
+                $('#txt1').attr('value', 'Generation 1');
+            });
+
+            // .html -> quita y reemplaza
+            // se puede usar para quitar todo y luego añadir con el append y preppend
+            $('#btn16').click(function () {
+                $('#p7').html('<span> prueba de html</span>');
+            });
+
+            // obtener el valor del elemento html
+            $('#btn17').click(function () {
+                let valor = $('#txt2').val();
+                alert(valor);
+            });
+
+            // Manipulacion de estilos
+            // css -> agregar un estilo al elemento html
+
+            $('#btn18').click(function () {
+                $('#div1').html('<p id="p9">Esto es un parrafo añadido por .html</p>');
+                $('#p9').css("color", "darkblue");
+                $('#p9').css("font-size", "20px");
+                $('#p9').append('<span id="txt3">, y este fue añadido por append</span>');
+                $('#p9').css("background-color", "grey");
+            });
+            $('#btn19').click(function () {
+                $('#div1').addClass('divColor');
+            });
+            $('#btn20').click(function () {
+                $('#div1').removeClass('divColor');
+            });
 
 
             //fin jquery    
         });
 
     </script>
+    <style>
+        .divColor {
+            width: 400px;
+            height: 200px;
+            background-color: salmon;
+        }
+    </style>
 
 </head>
 
@@ -121,6 +189,42 @@
     <button id="btn9" class="btn btn-primary"> fadeIn </button>
     <button id="btn10" class="btn btn-secondary"> fadeToggle </button>
     <p id="p4">Este es el parrafo 4</p>
+    <hr><br>
+    <!-- Manipulacion -->
+    <button id="btn11" class="btn btn-primary"> after()</button>
+    <button id="btn12" class="btn btn-primary"> before()</button>
+    <button id="btn13" class="btn btn-primary"> append()</button>
+    <button id="btn14" class="btn btn-primary"> prepend()</button>
+    <h1>Manipulacion de elementos</h1>
+    <p id="p5">Este es el parrafo 5</p>
+    <hr><br>
+    <!-- ATTR -->
+    <button id="btn15" class="btn btn-primary"> attr()</button>
+    <input type="text" id="txt1">
+    <h1>Atributos</h1>
+    <p id="p6">Este es el parrafo 6</p>
+    <hr><br>
+    <!-- HTML -->
+    <button id="btn16" class="btn btn-primary"> html()</button>
+    <h1>HTML</h1>
+    <p id="p7">Este es el parrafo 7</p>
+    <hr><br>
+    <!-- Val -->
+    <button id="btn17" class="btn btn-primary"> val()</button>
+    <h1>Val</h1>
+    <p id="p8">Este es el parrafo 8</p>
+    <input type="text" id="txt2" value="valor input txt2">
+    <hr><br>
+    <!-- Manipulacion de estilos -->
+    <button id="btn18" class="btn btn-primary"> css()</button>
+    <button id="btn19" class="btn btn-primary"> addclass()</button>
+    <button id="btn20" class="btn btn-primary"> removeclass()</button>
+
+    <h1>Manipulando Estilos</h1>
+    <div id="div1">
+
+    </div>
+
     <hr><br>
 
 

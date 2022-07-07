@@ -6,3 +6,7 @@
 .m-{number} (lo mismo que el atributo anterior)
 .text-{color}
 .container */
+
+#header{
+    background-color: blue;
+}
