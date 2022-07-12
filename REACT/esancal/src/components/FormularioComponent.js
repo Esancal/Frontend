@@ -5,37 +5,55 @@ const FormularioComponent = () => {
     <div className="col">
       <h1>Formulario de ingreso</h1>
       <form action="" method="post">
-        <label for="Nombre">Producto:</label>
+        <label for="producto">Producto:</label>
         <br></br>
         <input
+          class="form-control"
           type="text"
-          id="Nombre"
-          name="Nombre"
-          placeholder="Ingresa tu Nombre"
+          id="producto"
+          name="producto"
+          placeholder="Ingresa el producto"
           required
         ></input>
+
         <br></br>
         <br></br>
-        <label for="Edad">Cantidad:</label>
+
+        <label for="cantidad">Cantidad:</label>
         <br></br>
         <input
+          class="form-control"
           type="number"
-          id="Edad"
-          name="Edad"
-          min="18"
-          max="150"
-          placeholder="Ingresa tu Edad"
+          id="cantidad"
+          name="cantidad"
+          min="0"
+          placeholder="Ingresa la cantidad"
           required
         ></input>
+
         <br></br>
         <br></br>
+
         <label for="valor">Valor</label>
         <br></br>
-        <input type="number" id="valor" name="valor" placeholder="Ingresa el valor" required></input>
-        <br></br>
+        <input
+          class="form-control"
+          type="number"
+          id="valor"
+          name="valor"
+          placeholder="Ingresa el valor"
+          required
+        ></input>
+
         <hr></hr>
-        <button type="submit">Añadir</button>
-        <input type="reset" value="Vaciar"></input>
+        <br></br>
+
+        <button class="btn btn-primary me-3" type="submit">
+          Añadir
+        </button>
+        <button class="btn btn-secondary" type="reset">
+          Vaciar
+        </button>
       </form>
     </div>
   );

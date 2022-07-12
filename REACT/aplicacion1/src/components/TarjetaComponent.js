@@ -1,6 +1,6 @@
 import React from "react";
 
-const TarjetaComponent = ({usuario}) => {
+const TarjetaComponent = ({usuario, tarjetaDelete}) => {
   return (
     <div className="card">
       <div className="card-body">
@@ -11,7 +11,7 @@ const TarjetaComponent = ({usuario}) => {
           <button className="btn btn-sm btn-outline-primary mr-2">
             Editar
           </button>
-          <button className="btn btn-sm btn-outline-danger">Eliminar</button>
+          <button className="btn btn-sm btn-outline-danger" onClick={()=>tarjetaDelete(usuario.key)}>Eliminar</button>
         </div>
       </div>
     </div>
