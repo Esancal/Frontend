@@ -1,18 +1,12 @@
 import React from "react";
+import TarjetaComponent from "./components/TarjetaComponent";
+import FormularioComponent from "./components/FormularioComponent";
+import UsuarioComponent from "./components/UsuarioComponent";
 
 // Esto es una Arrow function
 const App = () => {
   return (
-    <div className="container mt-4">
-      <div className="row">
-        <div className="col-8">
-          <h1>Lista</h1>
-        </div>
-        <div className="col">
-          <h1>Formulario</h1>
-        </div>
-      </div>
-    </div>
+    <UsuarioComponent/>
   );
 };
 export default App;
