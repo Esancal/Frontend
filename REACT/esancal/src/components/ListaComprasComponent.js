@@ -48,9 +48,14 @@ const initialProductos = [
 
 const ListaComprasComponent = () => {
   const [productos, setProductos] = useState(initialProductos);
-  const borrarProducto = (productoKey) => {
+  const productoDelete = (productoKey) => {
     const cambioProductos = productos.filter((p) => p.key !== productoKey);
     setProductos(cambioProductos);
+  };
+
+  const addProducto = (producto) => {
+    const addProducto = [...productos, producto];
+    setProductos(addProducto);
   };
 
   return (
@@ -60,7 +65,11 @@ const ListaComprasComponent = () => {
         {
           /* (VARIABLE_ITERABLE => <COMPONENTE PARAMETRO = {VARIABLE_ITERABLE}/>) */
           productos.map((p) => (
-            <DatosLiComponent key={p.key} productos={p} borrarProducto={borrarProducto}/>
+            <DatosLiComponent
+              key={p.key}
+              productos={p}
+              productoDelete={productoDelete}
+            />
           ))
         }
       </ul>
