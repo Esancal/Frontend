@@ -1,6 +1,6 @@
 import React from "react";
 
-const DatosLiComponent = ({ productos, borrarProducto }) => {
+const DatosLiComponent = ({ productos, productoDelete }) => {
   return (
     <li>
       {productos.producto} / Cantidad: {productos.cantidad} / Valor $
