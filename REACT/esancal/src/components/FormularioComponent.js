@@ -1,10 +1,15 @@
 import React from "react";
 
 const FormularioComponent = () => {
+
+  const handleSubmit =(botonS)=>{
+    botonS.preventDefault();
+  }
+
   return (
     <div className="col">
       <h1>Formulario de ingreso</h1>
-      <form action="" method="post">
+      <form onSubmit={handleSubmit}>
         <label for="producto">Producto:</label>
         <br></br>
         <input
