@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import DatosLiComponent from "./DatosLiComponent";
+import FormularioComponent from "./FormularioComponent";
 
 const initialProductos = [
   {
@@ -53,26 +54,31 @@ const ListaComprasComponent = () => {
     setProductos(cambioProductos);
   };
 
-  const addProducto = (producto) => {
-    const addProducto = [...productos, producto];
-    setProductos(addProducto);
+  const productoAdd = (producto) => {
+    const productoAdd = [...productos, producto];
+    setProductos(productoAdd);
   };
 
   return (
-    <div className="col-8">
-      <h1>Lista de compras</h1>
-      <ul>
-        {
-          /* (VARIABLE_ITERABLE => <COMPONENTE PARAMETRO = {VARIABLE_ITERABLE}/>) */
-          productos.map((p) => (
-            <DatosLiComponent
-              key={p.key}
-              productos={p}
-              productoDelete={productoDelete}
-            />
-          ))
-        }
-      </ul>
+    <div className="row">
+      <div className="col-8">
+        <h1>Lista de compras</h1>
+        <ul>
+          {
+            /* (VARIABLE_ITERABLE => <COMPONENTE PARAMETRO = {VARIABLE_ITERABLE}/>) */
+            productos.map((p) => (
+              <DatosLiComponent
+                key={p.key}
+                productos={p}
+                productoDelete={productoDelete}
+              />
+            ))
+          }
+        </ul>
+      </div>
+      <div className="col">
+        <FormularioComponent productoAdd={productoAdd} />
+      </div>
     </div>
   );
 };

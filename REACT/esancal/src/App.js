@@ -3,8 +3,6 @@ import CompraComponent from "./components/CompraComponent";
 
 // Esto es una Arrow function
 const App = () => {
-  return (
-    <CompraComponent/>
-  );
+  return <CompraComponent/>;
 };
 export default App;

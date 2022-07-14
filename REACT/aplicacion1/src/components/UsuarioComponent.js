@@ -20,18 +20,21 @@ const initialUsuarios = [
     nombre: "Joseph",
     apellido: "Nastyo",
     edad: "44",
+    password: "Wasda",
   },
   {
     key: 1,
     nombre: "Andres",
     apellido: "Vamps",
     edad: "32",
+    password: "noser",
   },
   {
     key: 2,
     nombre: "Aato",
     apellido: "Romps",
     edad: "432",
+    password: "qwrgds",
   },
 ];
 
@@ -42,7 +45,7 @@ const UsuarioComponent = () => {
   state[0]=initialUsuarios 
   state[1]= funcion que nos permite hacer cambios */
   }
-
+  const [usuarioEditado, setUsuarioEditado] = useState(null);
   const tarjetaDelete = (usuarioKey) => {
     const changeUsuarios = usuarios.filter((u) => u.key !== usuarioKey);
     setUsuarios(changeUsuarios);
@@ -51,6 +54,13 @@ const UsuarioComponent = () => {
   const usuarioAdd = (usuario) => {
     const addUsuarios = [...usuarios, usuario];
     setUsuarios(addUsuarios);
+  };
+
+  const usuarioEdit = (usuarioEditado) => {
+    const changeUsuarios = usuarios.map((usuario) =>
+      usuario.key === usuarioEditado.key ? usuarioEditado : usuario
+    );
+    setUsuarios(changeUsuarios);
   };
 
   return (
@@ -67,13 +77,18 @@ const UsuarioComponent = () => {
                 key={u.key}
                 usuario={u}
                 tarjetaDelete={tarjetaDelete}
+                setUsuarioEditado={setUsuarioEditado}
               />
             ))
           }
         </div>
         <div className="col">
           <h1>Formulario</h1>
-          <FormularioComponent usuarioAdd={usuarioAdd} />
+          <FormularioComponent
+            usuarioAdd={usuarioAdd}
+            usuarioEditado={usuarioEditado}
+            usuarioEdit={usuarioEdit}
+          />
         </div>
       </div>
     </div>
