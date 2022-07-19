@@ -10,13 +10,26 @@ const initialValues = [
   },
 ];
 
-const FormularioComponent = ({ usuarioAdd, usuarioEditado, usuarioEdit }) => {
+const FormularioComponent = ({
+  usuarioAdd,
+  usuarioEditado,
+  usuarioEdit,
+  setUsuarioEditado,
+}) => {
   const [values, setValues] = useState(initialValues);
   const { key, nombre, apellido, edad, password } = values;
 
   useEffect(() => {
     if (usuarioEditado !== null) {
       setValues(usuarioEditado);
+    } else {
+      setValues({
+        key: "",
+        nombre: "",
+        apellido: "",
+        edad: "",
+        password: "",
+      });
     }
   }, [usuarioEditado]);
 
@@ -56,6 +69,7 @@ const FormularioComponent = ({ usuarioAdd, usuarioEditado, usuarioEdit }) => {
           value={key}
           name="key"
           onChange={handleInputChange}
+          required
         />
         <br />
         <label>Nombre</label>
@@ -109,9 +123,26 @@ const FormularioComponent = ({ usuarioAdd, usuarioEditado, usuarioEdit }) => {
         ></input>
         <br />
       </div>
-      <button type="submit" className="btn btn-outline-primary">
-        {usuarioEditado ? "Editar" : "Crear"}
-      </button>
+      <div>
+        <button type="submit" className="btn btn-outline-primary me-2">
+          {usuarioEditado ? "Editar" : "Crear"}
+        </button>
+
+        {/* Un if para el boton */}
+        {usuarioEditado ? (
+          <button
+            type="button"
+            className="btn btn-outline-warning"
+            onClick={() => {
+              setUsuarioEditado(null);
+            }}
+          >
+            Cancelar
+          </button>
+        ) : (
+          ""
+        )}
+      </div>
     </form>
   );
 };

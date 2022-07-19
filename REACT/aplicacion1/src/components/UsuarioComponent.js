@@ -88,6 +88,7 @@ const UsuarioComponent = () => {
             usuarioAdd={usuarioAdd}
             usuarioEditado={usuarioEditado}
             usuarioEdit={usuarioEdit}
+            setUsuarioEditado={setUsuarioEditado}
           />
         </div>
       </div>
